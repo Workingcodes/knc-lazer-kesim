@@ -56,12 +56,19 @@
       transition: color 0.2s; cursor: pointer;
     }
     .nav-links a:hover { color: #fff; }
-    .lang-btn {
-      background: var(--accent); color: #fff; border: none; cursor: pointer;
-      padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 13px;
-      font-weight: 700; font-family: inherit; transition: background 0.2s;
+    .lang-toggle {
+      display: flex; align-items: center; gap: 0.2rem;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 24px; padding: 0.32rem 0.85rem; cursor: pointer;
+      transition: background 0.2s; user-select: none;
     }
-    .lang-btn:hover { background: #c94e00; }
+    .lang-toggle:hover { background: rgba(255,255,255,0.2); }
+    .lang-opt {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.38); transition: color 0.2s; line-height: 1;
+    }
+    .lang-opt.active { color: #fff; }
+    .lang-sep { color: rgba(255,255,255,0.25); font-size: 12px; line-height: 1; }
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
       background: none; border: none; cursor: pointer; padding: 4px;
@@ -438,49 +445,54 @@
       </div>
     </a>
     <div class="nav-links">
-      <a onclick="scrollTo('about')">
+      <a onclick="scrollToSection('about')">
         <span data-lang-inline="tr" class="active">Hakkımızda</span>
         <span data-lang-inline="en">About</span>
       </a>
-      <a onclick="scrollTo('services')">
+      <a onclick="scrollToSection('services')">
         <span data-lang-inline="tr" class="active">Hizmetler</span>
         <span data-lang-inline="en">Services</span>
       </a>
-      <a onclick="scrollTo('gallery')">
+      <a onclick="scrollToSection('gallery')">
         <span data-lang-inline="tr" class="active">Galeri</span>
         <span data-lang-inline="en">Gallery</span>
       </a>
-      <a onclick="scrollTo('contact')">
+      <a onclick="scrollToSection('contact')">
         <span data-lang-inline="tr" class="active">İletişim</span>
         <span data-lang-inline="en">Contact</span>
       </a>
-      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+      <div class="lang-toggle" onclick="toggleLang()">
+        <span class="lang-opt active" data-l="tr">TR</span>
+        <span class="lang-sep">|</span>
+        <span class="lang-opt" data-l="en">EN</span>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a onclick="scrollTo('about'); closeMenu()">
+    <a onclick="scrollToSection('about'); closeMenu()">
       <span data-lang-inline="tr" class="active">Hakkımızda</span>
       <span data-lang-inline="en">About</span>
     </a>
-    <a onclick="scrollTo('services'); closeMenu()">
+    <a onclick="scrollToSection('services'); closeMenu()">
       <span data-lang-inline="tr" class="active">Hizmetler</span>
       <span data-lang-inline="en">Services</span>
     </a>
-    <a onclick="scrollTo('gallery'); closeMenu()">
+    <a onclick="scrollToSection('gallery'); closeMenu()">
       <span data-lang-inline="tr" class="active">Galeri</span>
       <span data-lang-inline="en">Gallery</span>
     </a>
-    <a onclick="scrollTo('contact'); closeMenu()">
+    <a onclick="scrollToSection('contact'); closeMenu()">
       <span data-lang-inline="tr" class="active">İletişim</span>
       <span data-lang-inline="en">Contact</span>
     </a>
-    <button class="lang-btn" onclick="toggleLang()">
-      <span data-lang-inline="tr" class="active">EN</span>
-      <span data-lang-inline="en">TR</span>
-    </button>
+    <div class="lang-toggle" onclick="toggleLang()" style="align-self:flex-start;margin-top:0.25rem;">
+      <span class="lang-opt active" data-l="tr">TR</span>
+      <span class="lang-sep">|</span>
+      <span class="lang-opt" data-l="en">EN</span>
+    </div>
   </div>
 </nav>
 
@@ -510,7 +522,7 @@
         📞 <span data-lang-inline="tr" class="active">Hemen Ara</span>
         <span data-lang-inline="en">Call Now</span>
       </a>
-      <a onclick="scrollTo('gallery')" class="btn-outline">
+      <a onclick="scrollToSection('gallery')" class="btn-outline">
         <span data-lang-inline="tr" class="active">Galeriyi Gör</span>
         <span data-lang-inline="en">View Gallery</span>
       </a>
@@ -934,19 +946,19 @@
           <span data-lang-inline="en">Quick Links</span>
         </p>
         <div class="footer-links">
-          <a onclick="scrollTo('about')">
+          <a onclick="scrollToSection('about')">
             <span data-lang-inline="tr" class="active">Hakkımızda</span>
             <span data-lang-inline="en">About</span>
           </a>
-          <a onclick="scrollTo('services')">
+          <a onclick="scrollToSection('services')">
             <span data-lang-inline="tr" class="active">Hizmetler</span>
             <span data-lang-inline="en">Services</span>
           </a>
-          <a onclick="scrollTo('gallery')">
+          <a onclick="scrollToSection('gallery')">
             <span data-lang-inline="tr" class="active">Galeri</span>
             <span data-lang-inline="en">Gallery</span>
           </a>
-          <a onclick="scrollTo('contact')">
+          <a onclick="scrollToSection('contact')">
             <span data-lang-inline="tr" class="active">İletişim</span>
             <span data-lang-inline="en">Contact</span>
           </a>
@@ -996,14 +1008,15 @@
   }
 
   function applyLang() {
-    const opp = currentLang === 'tr' ? 'en' : 'tr';
     document.querySelectorAll('[data-lang]').forEach(el => {
       el.classList.toggle('active', el.getAttribute('data-lang') === currentLang);
     });
     document.querySelectorAll('[data-lang-inline]').forEach(el => {
       el.classList.toggle('active', el.getAttribute('data-lang-inline') === currentLang);
     });
-    document.getElementById('langBtn').textContent = opp.toUpperCase();
+    document.querySelectorAll('.lang-opt[data-l]').forEach(el => {
+      el.classList.toggle('active', el.getAttribute('data-l') === currentLang);
+    });
     document.documentElement.lang = currentLang;
   }
 
@@ -1015,7 +1028,7 @@
   document.getElementById('navbar').classList.remove('scrolled');
 
   // ── Smooth scroll ──
-  function scrollTo(id) {
+  function scrollToSection(id) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
   function scrollToTop(e) {
