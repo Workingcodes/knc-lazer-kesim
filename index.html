@@ -5,439 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KNC Lazer Kesim – CNC Router Kesim | Ahşap Fason Üretim | Beykoz İstanbul</title>
   <meta name="description" content="KNC Lazer Kesim – Beykoz İstanbul'da profesyonel CNC lazer kesim, CNC router kesim ve ahşap fason üretim hizmetleri. ☆5.0 Google puanı. Hemen arayın: +90 555 176 34 14" />
-  <meta name="keywords" content="KNC lazer kesim, CNC router kesim, ahşap fason üretim, lazer kesim İstanbul, CNC kesim Beykoz, mobilya üretimi" />
-  <meta property="og:title" content="KNC Lazer Kesim – CNC Router Kesim İstanbul" />
-  <meta property="og:description" content="Beykoz İstanbul'da profesyonel CNC lazer kesim ve ahşap fason üretim. 5.0 Google puanı, 23+ değerlendirme." />
-  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; -webkit-font-smoothing: antialiased; }
-    img { max-width: 100%; height: auto; display: block; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-
-    :root {
-      --primary: #1B3A6B;
-      --accent: #E05A00;
-      --dark: #0d1f3c;
-      --gray: #F8F9FA;
-    }
-
-    /* ── NAVBAR ── */
-    #navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      padding: 1rem 0;
-      transition: background 0.3s, box-shadow 0.3s;
-    }
-    #navbar.scrolled {
-      background: var(--primary);
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-    .nav-inner {
-      max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo { display: flex; align-items: center; gap: 0.5rem; }
-    .nav-logo-box {
-      width: 40px; height: 40px; background: var(--accent); border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 900; color: #fff; font-size: 13px; letter-spacing: 0.5px;
-    }
-    .nav-logo-text { line-height: 1.2; }
-    .nav-logo-text strong { display: block; color: #fff; font-weight: 700; font-size: 15px; }
-    .nav-logo-text span { display: block; color: var(--accent); font-size: 11px; }
-    .nav-links { display: flex; align-items: center; gap: 1.75rem; }
-    .nav-links a {
-      color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500;
-      transition: color 0.2s; cursor: pointer;
-    }
-    .nav-links a:hover { color: #fff; }
-    .lang-toggle {
-      display: flex; align-items: center; gap: 0.2rem;
-      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
-      border-radius: 24px; padding: 0.32rem 0.85rem; cursor: pointer;
-      transition: background 0.2s; user-select: none;
-    }
-    .lang-toggle:hover { background: rgba(255,255,255,0.2); }
-    .lang-opt {
-      font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
-      color: rgba(255,255,255,0.38); transition: color 0.2s; line-height: 1;
-    }
-    .lang-opt.active { color: #fff; }
-    .lang-sep { color: rgba(255,255,255,0.25); font-size: 12px; line-height: 1; }
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 4px;
-    }
-    .hamburger span {
-      display: block; width: 24px; height: 2px; background: #fff;
-      transition: all 0.3s; border-radius: 2px;
-    }
-    .mobile-menu {
-      display: none; position: absolute; top: 100%; left: 0; right: 0;
-      background: var(--primary); padding: 1rem 1.5rem; flex-direction: column; gap: 0.75rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      color: rgba(255,255,255,0.85); font-size: 15px; font-weight: 500;
-      padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);
-      cursor: pointer;
-    }
-    .mobile-menu a:last-child { border-bottom: none; }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-    }
-
-    /* ── HERO ── */
-    #hero {
-      position: relative; height: 100vh; min-height: 600px;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background-image: url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdZpxE9b5IhZM782eF72zKAgcGNL1njLaJzOTdsMyg0ttTJH-9ty90BHnDyWe-0wQH7DpDbB836OkclMiLCzB2GHDPKxOpITrHoi-yAwEl9WUS50QTuQ4Fh5ny0PDtLK8UyfHb=w1920-h1080-k-no');
-      background-size: cover; background-position: center;
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(27,58,107,0.85) 0%, rgba(13,31,60,0.75) 100%);
-    }
-    .hero-content {
-      position: relative; text-align: center; color: #fff;
-      padding: 0 1.5rem; max-width: 900px;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(224,90,0,0.2); border: 1px solid rgba(224,90,0,0.4);
-      color: #ffa055; font-size: 13px; font-weight: 600;
-      padding: 0.4rem 1rem; border-radius: 20px; margin-bottom: 1.5rem;
-    }
-    .hero-badge::before { content: "★"; color: #FFD700; }
-    .hero-title {
-      font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900;
-      line-height: 1.1; margin-bottom: 1.25rem;
-    }
-    .hero-title .accent { color: var(--accent); }
-    .hero-subtitle {
-      font-size: clamp(1rem, 2.5vw, 1.2rem); color: rgba(255,255,255,0.8);
-      margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;
-    }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
-    .btn-primary {
-      background: var(--accent); color: #fff; font-weight: 700;
-      padding: 0.875rem 2rem; border-radius: 12px; font-size: 15px;
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn-primary:hover { background: #c94e00; transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent; color: #fff; font-weight: 600;
-      padding: 0.875rem 2rem; border-radius: 12px; font-size: 15px;
-      border: 2px solid rgba(255,255,255,0.4);
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
-    .hero-stats {
-      display: inline-flex; gap: 0;
-      background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
-      border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15);
-    }
-    .hero-stat {
-      padding: 1rem 1.5rem; text-align: center;
-      border-right: 1px solid rgba(255,255,255,0.1);
-    }
-    .hero-stat:last-child { border-right: none; }
-    .hero-stat strong { display: block; font-size: 1.5rem; font-weight: 900; color: var(--accent); }
-    .hero-stat span { font-size: 12px; color: rgba(255,255,255,0.7); }
-    .hero-scroll {
-      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-      color: rgba(255,255,255,0.5); font-size: 13px; text-align: center;
-      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-    }
-    .hero-scroll-arrow {
-      width: 24px; height: 24px; border-right: 2px solid rgba(255,255,255,0.4);
-      border-bottom: 2px solid rgba(255,255,255,0.4);
-      transform: rotate(45deg); animation: bounce 2s infinite;
-    }
-    @keyframes bounce { 0%,100%{transform:rotate(45deg) translateY(0)} 50%{transform:rotate(45deg) translateY(6px)} }
-
-    /* ── SECTIONS ── */
-    section { padding: 5rem 0; }
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
-    .section-badge {
-      display: inline-block; background: rgba(224,90,0,0.1); color: var(--accent);
-      font-size: 13px; font-weight: 600; padding: 0.35rem 1rem; border-radius: 20px;
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 900;
-      line-height: 1.2; margin-bottom: 1.25rem;
-    }
-    .section-subtitle { font-size: 1rem; color: #666; max-width: 540px; }
-
-    /* ── ABOUT ── */
-    #about { background: #fff; }
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    }
-    .about-img-wrap {
-      position: relative; border-radius: 20px; overflow: hidden;
-      box-shadow: 0 20px 60px rgba(27,58,107,0.2);
-    }
-    .about-img-wrap img { width: 100%; height: 400px; object-fit: cover; }
-    .about-badge-float {
-      position: absolute; bottom: 1.5rem; left: 1.5rem;
-      background: var(--primary); color: #fff;
-      padding: 0.75rem 1.25rem; border-radius: 12px;
-      font-weight: 700; font-size: 14px;
-    }
-    .about-badge-float span { color: var(--accent); }
-    .about-stats { display: flex; gap: 1.5rem; margin: 1.5rem 0; }
-    .about-stat {
-      text-align: center; background: var(--gray); border-radius: 12px; padding: 1rem;
-      flex: 1;
-    }
-    .about-stat strong { display: block; font-size: 1.5rem; font-weight: 900; color: var(--primary); }
-    .about-stat span { font-size: 12px; color: #666; }
-    .about-features { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
-    .about-feature {
-      display: flex; align-items: center; gap: 0.75rem;
-      font-size: 14px; color: #555;
-    }
-    .about-feature::before {
-      content: "✓"; width: 22px; height: 22px; background: rgba(224,90,0,0.1);
-      color: var(--accent); border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0;
-      line-height: 22px; text-align: center;
-    }
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    }
-
-    /* ── SERVICES ── */
-    #services { background: var(--primary); }
-    #services .section-title { color: #fff; }
-    #services .section-subtitle { color: rgba(255,255,255,0.6); }
-    #services .section-badge { background: rgba(224,90,0,0.2); color: #ffa055; }
-    .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem;
-    }
-    .service-card {
-      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px; padding: 1.75rem;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .service-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
-    .service-icon {
-      width: 52px; height: 52px; background: rgba(224,90,0,0.15);
-      border-radius: 12px; display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 1rem;
-    }
-    .service-card h3 { color: #fff; font-size: 16px; font-weight: 700; margin-bottom: 0.5rem; }
-    .service-card p { color: rgba(255,255,255,0.55); font-size: 13.5px; line-height: 1.6; }
-    @media (max-width: 900px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 580px) {
-      .services-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ── WHY US ── */
-    #whyus { background: #fff; }
-    .whyus-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-    }
-    .features-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
-    }
-    .feature-card {
-      background: var(--gray); border-radius: 14px; padding: 1.25rem;
-    }
-    .feature-card-icon {
-      width: 42px; height: 42px; background: var(--primary); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; margin-bottom: 0.75rem;
-    }
-    .feature-card h4 { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem; }
-    .feature-card p { font-size: 12.5px; color: #666; line-height: 1.55; }
-    .whyus-img-wrap {
-      border-radius: 20px; overflow: hidden;
-      box-shadow: 0 20px 60px rgba(27,58,107,0.15);
-    }
-    .whyus-img-wrap img { width: 100%; height: 480px; object-fit: cover; }
-    @media (max-width: 768px) {
-      .whyus-grid { grid-template-columns: 1fr; }
-      .whyus-img-wrap { order: -1; }
-      .whyus-img-wrap img { height: 280px; }
-    }
-
-    /* ── GALLERY ── */
-    #gallery { background: var(--primary); }
-    #gallery .section-title { color: #fff; }
-    #gallery .section-subtitle { color: rgba(255,255,255,0.6); }
-    #gallery .section-badge { background: rgba(224,90,0,0.2); color: #ffa055; }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.75rem;
-      margin-top: 3rem;
-    }
-    .gallery-item {
-      position: relative; border-radius: 12px; overflow: hidden;
-      aspect-ratio: 4/3; cursor: pointer;
-    }
-    .gallery-item img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.4s;
-    }
-    .gallery-item:hover img { transform: scale(1.06); }
-    .gallery-item-overlay {
-      position: absolute; inset: 0;
-      background: rgba(27,58,107,0.4);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
-    .gallery-item-overlay svg { width: 32px; height: 32px; color: #fff; }
-    @media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    /* Lightbox */
-    #lightbox {
-      display: none; position: fixed; inset: 0; z-index: 9999;
-      background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
-    }
-    #lightbox.open { display: flex; }
-    #lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
-    #lightbox-close {
-      position: absolute; top: 1.5rem; right: 1.5rem;
-      background: rgba(255,255,255,0.15); border: none; cursor: pointer;
-      width: 44px; height: 44px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; font-size: 20px; transition: background 0.2s;
-    }
-    #lightbox-close:hover { background: rgba(255,255,255,0.25); }
-    #lightbox-prev, #lightbox-next {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      background: rgba(255,255,255,0.15); border: none; cursor: pointer;
-      width: 48px; height: 48px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; font-size: 20px; transition: background 0.2s;
-    }
-    #lightbox-prev { left: 1.5rem; }
-    #lightbox-next { right: 1.5rem; }
-    #lightbox-prev:hover, #lightbox-next:hover { background: rgba(255,255,255,0.25); }
-
-    /* ── CONTACT ── */
-    #contact { background: #fff; }
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-    }
-    .contact-info-item {
-      display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem;
-    }
-    .contact-icon {
-      width: 42px; height: 42px; background: var(--primary); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-      color: #fff; font-size: 18px;
-    }
-    .contact-info-item strong { display: block; font-size: 13px; color: var(--primary); margin-bottom: 0.2rem; }
-    .contact-info-item p, .contact-info-item a {
-      font-size: 14px; color: #666; line-height: 1.5;
-    }
-    .contact-info-item a { color: var(--accent); }
-    .contact-info-item a:hover { text-decoration: underline; }
-    .map-wrap { border-radius: 16px; overflow: hidden; margin-top: 1.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-    .contact-form { background: var(--gray); border-radius: 20px; padding: 2rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { margin-bottom: 1rem; }
-    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; }
-    .form-group input, .form-group textarea {
-      width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 10px;
-      padding: 0.75rem 1rem; font-size: 14px; font-family: inherit;
-      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .form-group input:focus, .form-group textarea:focus {
-      border-color: var(--primary); box-shadow: 0 0 0 3px rgba(27,58,107,0.1);
-    }
-    .form-group textarea { resize: none; }
-    .form-submit {
-      width: 100%; background: var(--primary); color: #fff; border: none;
-      font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer;
-      padding: 1rem; border-radius: 12px; transition: background 0.2s;
-    }
-    .form-submit:hover { background: #152d54; }
-    .form-success {
-      display: none; text-align: center; padding: 3rem 1rem;
-    }
-    .form-success-icon {
-      width: 64px; height: 64px; background: #dcfce7; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1rem; font-size: 28px;
-    }
-    .form-success p { color: var(--primary); font-weight: 600; font-size: 17px; }
-    @media (max-width: 768px) {
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-    }
-
-    /* ── FOOTER ── */
-    footer { background: var(--dark); color: #fff; padding: 3rem 0 2rem; }
-    .footer-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2.5rem;
-    }
-    .footer-logo { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
-    .footer-logo-box {
-      width: 40px; height: 40px; background: var(--accent); border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 900; color: #fff; font-size: 13px;
-    }
-    .footer-logo-text strong { display: block; font-size: 15px; color: #fff; }
-    .footer-logo-text span { font-size: 11px; color: var(--accent); }
-    .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
-    .footer-heading { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
-    .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
-    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.45); cursor: pointer; transition: color 0.2s; }
-    .footer-links a:hover { color: #fff; }
-    .footer-contact-item { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 13px; color: rgba(255,255,255,0.45); }
-    .footer-contact-item a { color: rgba(255,255,255,0.45); transition: color 0.2s; }
-    .footer-contact-item a:hover { color: var(--accent); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 0.75rem;
-    }
-    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.25); }
-    .footer-stars { display: flex; align-items: center; gap: 0.35rem; font-size: 12px; }
-    .footer-stars .stars { color: #FFD700; letter-spacing: 1px; }
-    .footer-stars span { color: rgba(255,255,255,0.3); }
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-
-    /* ── HELPERS ── */
-    .text-accent { color: var(--accent); }
-    [data-lang] { display: none; }
-    [data-lang].active { display: block; }
-    [data-lang-inline] { display: none; }
-    [data-lang-inline].active { display: inline; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-page="home">
 
-<!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a class="nav-logo" href="#" onclick="scrollToTop(event)">
+    <a class="nav-logo" href="index.html">
       <div class="nav-logo-box">KNC</div>
       <div class="nav-logo-text">
         <strong>KNC Lazer</strong>
@@ -445,50 +22,50 @@
       </div>
     </a>
     <div class="nav-links">
-      <a onclick="scrollToSection('about')">
+      <a href="hakkimizda.html">
         <span data-lang-inline="tr" class="active">Hakkımızda</span>
         <span data-lang-inline="en">About</span>
       </a>
-      <a onclick="scrollToSection('services')">
+      <a href="hizmetler.html">
         <span data-lang-inline="tr" class="active">Hizmetler</span>
         <span data-lang-inline="en">Services</span>
       </a>
-      <a onclick="scrollToSection('gallery')">
+      <a href="galeri.html">
         <span data-lang-inline="tr" class="active">Galeri</span>
         <span data-lang-inline="en">Gallery</span>
       </a>
-      <a onclick="scrollToSection('contact')">
+      <a href="iletisim.html">
         <span data-lang-inline="tr" class="active">İletişim</span>
         <span data-lang-inline="en">Contact</span>
       </a>
-      <div class="lang-toggle" onclick="toggleLang()">
+      <div class="lang-toggle" id="langToggle">
         <span class="lang-opt active" data-l="tr">TR</span>
         <span class="lang-sep">|</span>
         <span class="lang-opt" data-l="en">EN</span>
       </div>
     </div>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü">
+    <button class="hamburger" id="hamburger" aria-label="Menü">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a onclick="scrollToSection('about'); closeMenu()">
+    <a href="hakkimizda.html">
       <span data-lang-inline="tr" class="active">Hakkımızda</span>
       <span data-lang-inline="en">About</span>
     </a>
-    <a onclick="scrollToSection('services'); closeMenu()">
+    <a href="hizmetler.html">
       <span data-lang-inline="tr" class="active">Hizmetler</span>
       <span data-lang-inline="en">Services</span>
     </a>
-    <a onclick="scrollToSection('gallery'); closeMenu()">
+    <a href="galeri.html">
       <span data-lang-inline="tr" class="active">Galeri</span>
       <span data-lang-inline="en">Gallery</span>
     </a>
-    <a onclick="scrollToSection('contact'); closeMenu()">
+    <a href="iletisim.html">
       <span data-lang-inline="tr" class="active">İletişim</span>
       <span data-lang-inline="en">Contact</span>
     </a>
-    <div class="lang-toggle" onclick="toggleLang()" style="align-self:flex-start;margin-top:0.25rem;">
+    <div class="lang-toggle" id="langToggleMobile" style="align-self:flex-start;margin-top:0.25rem;">
       <span class="lang-opt active" data-l="tr">TR</span>
       <span class="lang-sep">|</span>
       <span class="lang-opt" data-l="en">EN</span>
@@ -496,9 +73,8 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdZpxE9b5IhZM782eF72zKAgcGNL1njLaJzOTdsMyg0ttTJH-9ty90BHnDyWe-0wQH7DpDbB836OkclMiLCzB2GHDPKxOpITrHoi-yAwEl9WUS50QTuQ4Fh5ny0PDtLK8UyfHb=w1920-h1080-k-no');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">
@@ -514,17 +90,15 @@
       </span>
     </h1>
     <p class="hero-subtitle">
-      <span data-lang="tr" class="active">Lazer kesim, CNC router ve ahşap fason üretimde uzman ekibimizle projenizi hayata geçiriyoruz. Hızlı teslimat, uygun fiyat.</span>
-      <span data-lang="en">Our expert team in laser cutting, CNC router, and wood outsourcing brings your project to life. Fast delivery, competitive pricing.</span>
+      <span data-lang-inline="tr" class="active">Lazer kesim, CNC router ve ahşap fason üretimde uzman ekibimizle projenizi hayata geçiriyoruz. Hızlı teslimat, uygun fiyat.</span>
+      <span data-lang-inline="en">Our expert team in laser cutting, CNC router, and wood outsourcing brings your project to life. Fast delivery, competitive pricing.</span>
     </p>
     <div class="hero-btns">
       <a href="tel:+905551763414" class="btn-primary">
-        📞 <span data-lang-inline="tr" class="active">Hemen Ara</span>
-        <span data-lang-inline="en">Call Now</span>
+        📞 <span data-lang-inline="tr" class="active">Hemen Ara</span><span data-lang-inline="en">Call Now</span>
       </a>
-      <a onclick="scrollToSection('gallery')" class="btn-outline">
-        <span data-lang-inline="tr" class="active">Galeriyi Gör</span>
-        <span data-lang-inline="en">View Gallery</span>
+      <a href="hizmetler.html" class="btn-outline">
+        <span data-lang-inline="tr" class="active">Hizmetleri Gör</span><span data-lang-inline="en">View Services</span>
       </a>
     </div>
     <div class="hero-stats">
@@ -534,13 +108,11 @@
       </div>
       <div class="hero-stat">
         <strong>23+</strong>
-        <span data-lang-inline="tr" class="active">Yorum</span>
-        <span data-lang-inline="en">Reviews</span>
+        <span data-lang-inline="tr" class="active">Yorum</span><span data-lang-inline="en">Reviews</span>
       </div>
       <div class="hero-stat">
         <strong>7+</strong>
-        <span data-lang-inline="tr" class="active">Yıl</span>
-        <span data-lang-inline="en">Years</span>
+        <span data-lang-inline="tr" class="active">Yıl</span><span data-lang-inline="en">Years</span>
       </div>
     </div>
   </div>
@@ -549,45 +121,37 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<section id="about" style="background:#fff;">
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDzsLOwNOSYfDkcq1phF_KH21SExbOo_OUV1-BeHm-0GlqXwXHgMPWzRVVve46VNWJr2SKB-9LYGpq43kIam9XWxhd8ibswuhl2SE83L6FqWAEli_n0QyfsvdgRc3dFHjrgD4=w1920-h1080-k-no"
-             alt="KNC Lazer Kesim Atölyesi" loading="lazy" />
-        <div class="about-badge-float">
-          ★5.0 <span>Google</span> · 23 Yorum
-        </div>
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDzsLOwNOSYfDkcq1phF_KH21SExbOo_OUV1-BeHm-0GlqXwXHgMPWzRVVve46VNWJr2SKB-9LYGpq43kIam9XWxhd8ibswuhl2SE83L6FqWAEli_n0QyfsvdgRc3dFHjrgD4=w1920-h1080-k-no" alt="KNC Lazer Kesim Atölyesi" loading="lazy" />
+        <div class="about-badge-float">★5.0 <span>Google</span> · 23 <span data-lang-inline="tr" class="active">Yorum</span><span data-lang-inline="en">Reviews</span></div>
       </div>
       <div>
         <span class="section-badge">
-          <span data-lang-inline="tr" class="active">Hakkımızda</span>
-          <span data-lang-inline="en">About Us</span>
+          <span data-lang-inline="tr" class="active">Hakkımızda</span><span data-lang-inline="en">About Us</span>
         </span>
-        <h2 class="section-title" style="color: var(--primary)">
+        <h2 class="section-title" style="color:var(--primary)">
           <span data-lang="tr" class="active">İstanbul'un Güvenilir <span class="text-accent">CNC Lazer</span> Ortağı</span>
           <span data-lang="en">Istanbul's Trusted <span class="text-accent">CNC Laser</span> Partner</span>
         </h2>
         <p class="section-subtitle">
-          <span data-lang-inline="tr" class="active">Beykoz İstanbul'da 7+ yıldır CNC lazer kesim, router kesim ve ahşap fason üretim alanında hizmet veriyoruz. Müşteri memnuniyeti bizim önceliğimizdir.</span>
-          <span data-lang-inline="en">We have been providing CNC laser cutting, router cutting, and wood outsourcing services in Beykoz, Istanbul for 7+ years. Customer satisfaction is our priority.</span>
+          <span data-lang-inline="tr" class="active">Beykoz İstanbul'da 7+ yıldır CNC lazer kesim, router kesim ve ahşap fason üretim alanında hizmet veriyoruz. Modern makine parkurumuz ve uzman ekibimizle küçükten büyüğe her projeyi hassasiyetle teslim ediyoruz.</span>
+          <span data-lang-inline="en">We have been providing CNC laser cutting, router cutting, and wood outsourcing services in Beykoz, Istanbul for 7+ years. With our modern machinery and expert team, we deliver every project with precision, from small to large scale.</span>
         </p>
         <div class="about-stats">
           <div class="about-stat">
             <strong>5.0★</strong>
-            <span data-lang-inline="tr" class="active">Google Puanı</span>
-            <span data-lang-inline="en">Google Rating</span>
+            <span data-lang-inline="tr" class="active">Google Puanı</span><span data-lang-inline="en">Google Rating</span>
           </div>
           <div class="about-stat">
             <strong>23+</strong>
-            <span data-lang-inline="tr" class="active">Müşteri Yorumu</span>
-            <span data-lang-inline="en">Customer Reviews</span>
+            <span data-lang-inline="tr" class="active">Müşteri Yorumu</span><span data-lang-inline="en">Reviews</span>
           </div>
           <div class="about-stat">
             <strong>6/7</strong>
-            <span data-lang-inline="tr" class="active">Açık (Pzt-Cmt)</span>
-            <span data-lang-inline="en">Open (Mon-Sat)</span>
+            <span data-lang-inline="tr" class="active">Açık (Pzt-Cmt)</span><span data-lang-inline="en">Open (Mon-Sat)</span>
           </div>
         </div>
         <div class="about-features">
@@ -604,326 +168,122 @@
             <span data-lang-inline="en">Full service from furniture design to mass production</span>
           </div>
         </div>
+        <div style="margin-top:2rem;">
+          <a href="hakkimizda.html" class="btn-ghost">
+            <span data-lang-inline="tr" class="active">Daha Fazla Bilgi</span><span data-lang-inline="en">Learn More</span> →
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<section class="services-section">
   <div class="container">
-    <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
-      <span class="section-badge">
-        <span data-lang-inline="tr" class="active">Hizmetlerimiz</span>
-        <span data-lang-inline="en">Our Services</span>
+    <div class="section-center">
+      <span class="section-badge-light">
+        <span data-lang-inline="tr" class="active">Hizmetlerimiz</span><span data-lang-inline="en">Our Services</span>
       </span>
-      <h2 class="section-title" style="color: #fff">
-        <span data-lang="tr" class="active">Sunduğumuz <span class="text-accent">Hizmetler</span></span>
-        <span data-lang="en">Services <span class="text-accent">We Offer</span></span>
+      <h2 class="section-title" style="color:#fff">
+        <span data-lang="tr" class="active">Öne Çıkan <span class="text-accent">Hizmetler</span></span>
+        <span data-lang="en">Featured <span class="text-accent">Services</span></span>
       </h2>
-      <p class="section-subtitle" style="margin: 0 auto">
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.6)">
         <span data-lang-inline="tr" class="active">CNC lazer kesimden ahşap fason üretime, geniş hizmet yelpazemizle yanınızdayız.</span>
-        <span data-lang-inline="en">From CNC laser cutting to wood outsourcing, we are with you with a wide range of services.</span>
+        <span data-lang-inline="en">From CNC laser cutting to wood outsourcing, we support you with a wide range of services.</span>
       </p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🔆</div>
-        <h3>
-          <span data-lang-inline="tr" class="active">CNC Lazer Kesim</span>
-          <span data-lang-inline="en">CNC Laser Cutting</span>
-        </h3>
-        <p>
-          <span data-lang-inline="tr" class="active">Ahşap, MDF, sunta ve diğer malzemelerde hassas lazer kesim hizmeti. Karmaşık desenler ve özel şekiller.</span>
-          <span data-lang-inline="en">Precise laser cutting service for wood, MDF, particle board and other materials. Complex patterns and custom shapes.</span>
-        </p>
+        <h3><span data-lang-inline="tr" class="active">CNC Lazer Kesim</span><span data-lang-inline="en">CNC Laser Cutting</span></h3>
+        <p><span data-lang-inline="tr" class="active">Ahşap, MDF, sunta ve diğer malzemelerde hassas lazer kesim hizmeti. Karmaşık desenler ve özel şekiller kolaylıkla işlenir.</span><span data-lang-inline="en">Precise laser cutting for wood, MDF, particle board and more. Complex patterns and custom shapes handled with ease.</span></p>
       </div>
       <div class="service-card">
         <div class="service-icon">⚙️</div>
-        <h3>
-          <span data-lang-inline="tr" class="active">CNC Router Kesim</span>
-          <span data-lang-inline="en">CNC Router Cutting</span>
-        </h3>
-        <p>
-          <span data-lang-inline="tr" class="active">CNC router ile 3 boyutlu şekillendirme, oyma ve kesim işlemleri. Yüksek hız ve hassasiyet.</span>
-          <span data-lang-inline="en">3D shaping, carving, and cutting operations with CNC router. High speed and precision.</span>
-        </p>
+        <h3><span data-lang-inline="tr" class="active">CNC Router Kesim</span><span data-lang-inline="en">CNC Router Cutting</span></h3>
+        <p><span data-lang-inline="tr" class="active">CNC router ile 3 boyutlu şekillendirme, oyma ve kesim işlemleri. Yüksek hız ve üstün hassasiyet garantisi.</span><span data-lang-inline="en">3D shaping, carving and cutting with CNC router. High speed and superior precision guaranteed.</span></p>
       </div>
       <div class="service-card">
         <div class="service-icon">🪵</div>
-        <h3>
-          <span data-lang-inline="tr" class="active">Ahşap Fason Üretim</span>
-          <span data-lang-inline="en">Wood Outsourcing</span>
-        </h3>
-        <p>
-          <span data-lang-inline="tr" class="active">Özel ahşap parça ve komponent üretimi. Küçük ve büyük ölçekli projelerde kaliteli fason üretim.</span>
-          <span data-lang-inline="en">Custom wood part and component manufacturing. Quality outsourcing for small and large-scale projects.</span>
-        </p>
+        <h3><span data-lang-inline="tr" class="active">Ahşap Fason Üretim</span><span data-lang-inline="en">Wood Outsourcing</span></h3>
+        <p><span data-lang-inline="tr" class="active">Özel ahşap parça ve komponent üretimi. Küçük ve büyük ölçekli projelerde kaliteli fason üretim hizmeti sunuyoruz.</span><span data-lang-inline="en">Custom wood part and component manufacturing for small and large-scale projects with reliable quality.</span></p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🛋️</div>
-        <h3>
-          <span data-lang-inline="tr" class="active">Mobilya Üretimi</span>
-          <span data-lang-inline="en">Furniture Manufacturing</span>
-        </h3>
-        <p>
-          <span data-lang-inline="tr" class="active">Özel tasarım mobilya parçaları ve tamamlanmış mobilya ürünleri. Seri üretim ve prototip çalışmaları.</span>
-          <span data-lang-inline="en">Custom design furniture parts and finished furniture products. Mass production and prototype work.</span>
-        </p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📐</div>
-        <h3>
-          <span data-lang-inline="tr" class="active">Ebatlama</span>
-          <span data-lang-inline="en">Panel Sizing</span>
-        </h3>
-        <p>
-          <span data-lang-inline="tr" class="active">MDF, sunta ve ahşap panellerin hassas ebatlama işlemi. İstenilen boyutlarda kesim ve hazırlama.</span>
-          <span data-lang-inline="en">Precise sizing of MDF, particle board and wood panels. Cutting and preparation to desired dimensions.</span>
-        </p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🎨</div>
-        <h3>
-          <span data-lang-inline="tr" class="active">Tasarım Danışmanlığı</span>
-          <span data-lang-inline="en">Design Consulting</span>
-        </h3>
-        <p>
-          <span data-lang-inline="tr" class="active">Ürününüz için en uygun tasarım ve malzeme seçiminde uzman desteği. Fikrinizi gerçeğe dönüştürüyoruz.</span>
-          <span data-lang-inline="en">Expert support for the best design and material selection for your product. We turn your idea into reality.</span>
-        </p>
-      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="hizmetler.html" class="btn-primary">
+        <span data-lang-inline="tr" class="active">Tüm Hizmetler</span><span data-lang-inline="en">All Services</span> →
+      </a>
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
-<section id="whyus">
+<section id="gallery-preview" style="background:#fff;">
   <div class="container">
-    <div class="whyus-grid">
-      <div>
-        <span class="section-badge">
-          <span data-lang-inline="tr" class="active">Neden Biz?</span>
-          <span data-lang-inline="en">Why Choose Us?</span>
-        </span>
-        <h2 class="section-title" style="color: var(--primary)">
-          <span data-lang="tr" class="active">Fark Yaratan <span class="text-accent">6 Özellik</span></span>
-          <span data-lang="en"><span class="text-accent">6 Features</span> That Make a Difference</span>
-        </h2>
-        <p class="section-subtitle" style="margin-bottom: 2rem">
-          <span data-lang-inline="tr" class="active">Yıllar içinde edindiğimiz deneyim ve teknolojik altyapımızla size en iyi hizmeti sunuyoruz.</span>
-          <span data-lang-inline="en">We provide you with the best service with our experience gained over the years and technological infrastructure.</span>
-        </p>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-card-icon">⚡</div>
-            <h4>
-              <span data-lang-inline="tr" class="active">Hızlı Teslimat</span>
-              <span data-lang-inline="en">Fast Delivery</span>
-            </h4>
-            <p>
-              <span data-lang-inline="tr" class="active">Acil siparişler dahil, söz verilen sürede teslimat garantisi.</span>
-              <span data-lang-inline="en">Delivery guarantee within the promised time, including urgent orders.</span>
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-icon">🎯</div>
-            <h4>
-              <span data-lang-inline="tr" class="active">Hassas Kesim</span>
-              <span data-lang-inline="en">Precise Cutting</span>
-            </h4>
-            <p>
-              <span data-lang-inline="tr" class="active">0.1mm hassasiyete kadar kesim kalitesi ve tutarlılığı.</span>
-              <span data-lang-inline="en">Cutting quality and consistency up to 0.1mm precision.</span>
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-icon">💰</div>
-            <h4>
-              <span data-lang-inline="tr" class="active">Rekabetçi Fiyat</span>
-              <span data-lang-inline="en">Competitive Pricing</span>
-            </h4>
-            <p>
-              <span data-lang-inline="tr" class="active">Kaliteden ödün vermeden piyasanın en uygun fiyatları.</span>
-              <span data-lang-inline="en">Most competitive prices without compromising quality.</span>
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-icon">🏆</div>
-            <h4>
-              <span data-lang-inline="tr" class="active">5.0 Google Puanı</span>
-              <span data-lang-inline="en">5.0 Google Rating</span>
-            </h4>
-            <p>
-              <span data-lang-inline="tr" class="active">23 müşteri yorumu ile tam puan memnuniyeti.</span>
-              <span data-lang-inline="en">Perfect score satisfaction with 23 customer reviews.</span>
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-icon">🔧</div>
-            <h4>
-              <span data-lang-inline="tr" class="active">Modern Ekipman</span>
-              <span data-lang-inline="en">Modern Equipment</span>
-            </h4>
-            <p>
-              <span data-lang-inline="tr" class="active">Son teknoloji CNC lazer ve router makineleri ile üretim.</span>
-              <span data-lang-inline="en">Production with state-of-the-art CNC laser and router machines.</span>
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-icon">👥</div>
-            <h4>
-              <span data-lang-inline="tr" class="active">Uzman Ekip</span>
-              <span data-lang-inline="en">Expert Team</span>
-            </h4>
-            <p>
-              <span data-lang-inline="tr" class="active">Alanında yıllar içinde uzmanlaşmış, deneyimli teknisyenler.</span>
-              <span data-lang-inline="en">Experienced technicians who have specialized in the field over the years.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="whyus-img-wrap">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_YFqPfdNwxVLHGbxeStVHEgJuZazI_3m-l8wj3eL0Berw-gdZxMJSjQXGKVt75ha3WY08jkjH24nDORcOHL9A_81IWg_yXplqgeqHyylZ2JQGwQXZD0xlefjqfGtcaLBAyYDU=w1920-h1080-k-no"
-             alt="KNC Lazer Kesim Çalışma" loading="lazy" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="container">
-    <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
+    <div class="section-center">
       <span class="section-badge">
-        <span data-lang-inline="tr" class="active">Galeri</span>
-        <span data-lang-inline="en">Gallery</span>
+        <span data-lang-inline="tr" class="active">Galeri</span><span data-lang-inline="en">Gallery</span>
       </span>
-      <h2 class="section-title" style="color: #fff">
+      <h2 class="section-title" style="color:var(--primary)">
         <span data-lang="tr" class="active">Çalışma <span class="text-accent">Galerimiz</span></span>
         <span data-lang="en">Our Work <span class="text-accent">Gallery</span></span>
       </h2>
-      <p class="section-subtitle" style="margin: 0 auto">
-        <span data-lang-inline="tr" class="active">Gerçekleştirdiğimiz projelerden öne çıkan çalışmalar.</span>
-        <span data-lang-inline="en">Highlights from projects we have completed.</span>
+      <p class="section-subtitle">
+        <span data-lang-inline="tr" class="active">Gerçekleştirdiğimiz projelerden öne çıkan bazı çalışmalar.</span>
+        <span data-lang-inline="en">Highlights from some of our completed projects.</span>
       </p>
     </div>
-    <div class="gallery-grid" id="galleryGrid">
-      <!-- Items injected by JS -->
+    <div class="gallery-preview-grid">
+      <div class="gallery-item">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdZpxE9b5IhZM782eF72zKAgcGNL1njLaJzOTdsMyg0ttTJH-9ty90BHnDyWe-0wQH7DpDbB836OkclMiLCzB2GHDPKxOpITrHoi-yAwEl9WUS50QTuQ4Fh5ny0PDtLK8UyfHb=w800-h600-k-no" alt="CNC Lazer Kesim 1" loading="lazy" />
+        <div class="gallery-item-overlay"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHYvKO-ucAh8dRmzoTS0DPafqyVsUlcjuq2AXOca2zb9Q6BkrwMlnQG2SO27y0iJu_Bp8QLEhRi3Pm7pf94EOC0_jEnUcikpTyH9VvwCkWF5t204inWcU53nXx2w6ohfWEOxE=w800-h600-k-no" alt="CNC Lazer Kesim 2" loading="lazy" />
+        <div class="gallery-item-overlay"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_YFqPfdNwxVLHGbxeStVHEgJuZazI_3m-l8wj3eL0Berw-gdZxMJSjQXGKVt75ha3WY08jkjH24nDORcOHL9A_81IWg_yXplqgeqHyylZ2JQGwQXZD0xlefjqfGtcaLBAyYDU=w800-h600-k-no" alt="CNC Router Kesim" loading="lazy" />
+        <div class="gallery-item-overlay"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGV7RQP3pvVYe7-OfSoTkUOcZy-viIVsU-Do7NcwHL17I7rJypA9SMQa8crqJRKGmn7rsfIgDUVvcA5p2ZSnqCMkXpdjibqJWNBQO4UjZ6CkQ_0PmWE5a1bzfVjZLjPrzNq1Q0xXg=w800-h600-k-no" alt="Ahşap Mobilya" loading="lazy" />
+        <div class="gallery-item-overlay"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="galeri.html" class="btn-ghost">
+        <span data-lang-inline="tr" class="active">Tüm Galeri</span><span data-lang-inline="en">View Full Gallery</span> →
+      </a>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section class="cta-banner">
   <div class="container">
-    <div class="contact-grid">
-      <div>
-        <span class="section-badge">
-          <span data-lang-inline="tr" class="active">İletişim</span>
-          <span data-lang-inline="en">Contact</span>
-        </span>
-        <h2 class="section-title" style="color: var(--primary)">
-          <span data-lang="tr" class="active">Bize <span class="text-accent">Ulaşın</span></span>
-          <span data-lang="en">Get in <span class="text-accent">Touch</span></span>
-        </h2>
-        <div class="contact-info-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <strong>
-              <span data-lang-inline="tr" class="active">Adres</span>
-              <span data-lang-inline="en">Address</span>
-            </strong>
-            <p>İncirköy, Tuğla Fbr. Sk. No:7/C, 34800 Beykoz/İstanbul</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">📞</div>
-          <div>
-            <strong>
-              <span data-lang-inline="tr" class="active">Telefon</span>
-              <span data-lang-inline="en">Phone</span>
-            </strong>
-            <a href="tel:+905551763414">+90 555 176 34 14</a>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">🕐</div>
-          <div>
-            <strong>
-              <span data-lang-inline="tr" class="active">Çalışma Saatleri</span>
-              <span data-lang-inline="en">Working Hours</span>
-            </strong>
-            <p>
-              <span data-lang-inline="tr" class="active">Pzt – Cmt: 08:00 – 18:00 | Pazar Kapalı</span>
-              <span data-lang-inline="en">Mon – Sat: 08:00 – 18:00 | Sunday Closed</span>
-            </p>
-          </div>
-        </div>
-        <div class="map-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.8!2d29.0!3d41.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacb9a4dfbd3dd%3A0xec4dc1b6acbc5d18!2sKNC%20Lazer%20Kesim%20CNC%20Router%20Kesim%20Ah%C5%9Fap%20Fason%20%C3%9Cretim!5e0!3m2!1str!2str!4v1"
-            width="100%" height="220" style="border:0;" allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="KNC Lazer Kesim Konum">
-          </iframe>
-        </div>
-      </div>
-      <div>
-        <div class="contact-form">
-          <div id="formWrap">
-            <h3 style="font-size: 18px; color: var(--primary); font-weight: 800; margin-bottom: 1.25rem;">
-              <span data-lang-inline="tr" class="active">Teklif Alın</span>
-              <span data-lang-inline="en">Get a Quote</span>
-            </h3>
-            <form id="contactForm" onsubmit="handleFormSubmit(event)">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>
-                    <span data-lang-inline="tr" class="active">Adınız</span>
-                    <span data-lang-inline="en">Your Name</span>
-                  </label>
-                  <input type="text" required />
-                </div>
-                <div class="form-group">
-                  <label>
-                    <span data-lang-inline="tr" class="active">Telefon</span>
-                    <span data-lang-inline="en">Phone</span>
-                  </label>
-                  <input type="tel" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label>E-posta</label>
-                <input type="email" required />
-              </div>
-              <div class="form-group">
-                <label>
-                  <span data-lang-inline="tr" class="active">Mesajınız</span>
-                  <span data-lang-inline="en">Your Message</span>
-                </label>
-                <textarea rows="5" required></textarea>
-              </div>
-              <button type="submit" class="form-submit">
-                <span data-lang-inline="tr" class="active">Gönder</span>
-                <span data-lang-inline="en">Send Message</span>
-              </button>
-            </form>
-          </div>
-          <div class="form-success" id="formSuccess">
-            <div class="form-success-icon">✅</div>
-            <p>
-              <span data-lang-inline="tr" class="active">Mesajınız alındı! En kısa sürede dönüş yapacağız.</span>
-              <span data-lang-inline="en">Message received! We will get back to you as soon as possible.</span>
-            </p>
-          </div>
-        </div>
-      </div>
+    <h2>
+      <span data-lang="tr" class="active">Projeniz için <span class="text-accent">Hemen İletişime Geçin</span></span>
+      <span data-lang="en">Get in Touch for <span class="text-accent">Your Project Now</span></span>
+    </h2>
+    <p>
+      <span data-lang-inline="tr" class="active">Ücretsiz fiyat teklifi almak veya sorularınızı sormak için bizi arayın ya da iletişim formunu doldurun.</span>
+      <span data-lang-inline="en">Call us or fill out the contact form for a free quote or to ask your questions.</span>
+    </p>
+    <div class="cta-btns">
+      <a href="tel:+905551763414" class="btn-primary">
+        📞 +90 555 176 34 14
+      </a>
+      <a href="iletisim.html" class="btn-outline">
+        <span data-lang-inline="tr" class="active">İletişim Formu</span><span data-lang-inline="en">Contact Form</span>
+      </a>
     </div>
+    <p style="margin-top:1.5rem;font-size:13px;color:rgba(255,255,255,0.45);">
+      📍 <span data-lang-inline="tr" class="active">İncirköy, Tuğla Fbr. Sk. No:7/C, 34800 Beykoz/İstanbul &nbsp;|&nbsp; Pzt–Cmt 08:00–18:00</span>
+      <span data-lang-inline="en">İncirköy, Tuğla Fbr. Sk. No:7/C, 34800 Beykoz/İstanbul &nbsp;|&nbsp; Mon–Sat 08:00–18:00</span>
+    </p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -942,70 +302,33 @@
       </div>
       <div>
         <p class="footer-heading">
-          <span data-lang-inline="tr" class="active">Hızlı Bağlantılar</span>
-          <span data-lang-inline="en">Quick Links</span>
+          <span data-lang-inline="tr" class="active">Hızlı Bağlantılar</span><span data-lang-inline="en">Quick Links</span>
         </p>
         <div class="footer-links">
-          <a onclick="scrollToSection('about')">
-            <span data-lang-inline="tr" class="active">Hakkımızda</span>
-            <span data-lang-inline="en">About</span>
-          </a>
-          <a onclick="scrollToSection('services')">
-            <span data-lang-inline="tr" class="active">Hizmetler</span>
-            <span data-lang-inline="en">Services</span>
-          </a>
-          <a onclick="scrollToSection('gallery')">
-            <span data-lang-inline="tr" class="active">Galeri</span>
-            <span data-lang-inline="en">Gallery</span>
-          </a>
-          <a onclick="scrollToSection('contact')">
-            <span data-lang-inline="tr" class="active">İletişim</span>
-            <span data-lang-inline="en">Contact</span>
-          </a>
+          <a href="hakkimizda.html"><span data-lang-inline="tr" class="active">Hakkımızda</span><span data-lang-inline="en">About</span></a>
+          <a href="hizmetler.html"><span data-lang-inline="tr" class="active">Hizmetler</span><span data-lang-inline="en">Services</span></a>
+          <a href="galeri.html"><span data-lang-inline="tr" class="active">Galeri</span><span data-lang-inline="en">Gallery</span></a>
+          <a href="iletisim.html"><span data-lang-inline="tr" class="active">İletişim</span><span data-lang-inline="en">Contact</span></a>
         </div>
       </div>
       <div>
         <p class="footer-heading">
-          <span data-lang-inline="tr" class="active">İletişim</span>
-          <span data-lang-inline="en">Contact</span>
+          <span data-lang-inline="tr" class="active">İletişim</span><span data-lang-inline="en">Contact</span>
         </p>
         <div class="footer-contact-item">📍 İncirköy, Tuğla Fbr. Sk. No:7/C, Beykoz/İstanbul</div>
         <div class="footer-contact-item">📞 <a href="tel:+905551763414">+90 555 176 34 14</a></div>
-        <div class="footer-contact-item">
-          🕐 <span data-lang-inline="tr" class="active">Pzt–Cmt: 08:00–18:00</span>
-          <span data-lang-inline="en">Mon–Sat: 08:00–18:00</span>
-        </div>
+        <div class="footer-contact-item">🕐 <span data-lang-inline="tr" class="active">Pzt–Cmt: 08:00–18:00</span><span data-lang-inline="en">Mon–Sat: 08:00–18:00</span></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="footerYear"></span> KNC Lazer Kesim.
-        <span data-lang-inline="tr" class="active">Tüm hakları saklıdır.</span>
-        <span data-lang-inline="en">All rights reserved.</span>
-      </p>
-      <div class="footer-stars">
-        <span class="stars">★★★★★</span>
-        <span>5.0 Google</span>
-      </div>
+      <p>© <span id="footerYear"></span> KNC Lazer Kesim. <span data-lang-inline="tr" class="active">Tüm hakları saklıdır.</span><span data-lang-inline="en">All rights reserved.</span></p>
+      <div class="footer-stars"><span class="stars">★★★★★</span><span>5.0 Google</span></div>
     </div>
   </div>
 </footer>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
-  <button id="lightbox-prev" onclick="lightboxNav(-1)">‹</button>
-  <img id="lightbox-img" src="" alt="Gallery" />
-  <button id="lightbox-next" onclick="lightboxNav(1)">›</button>
-</div>
-
 <script>
-  // ── Language ──
-  let currentLang = 'tr';
-
-  function toggleLang() {
-    currentLang = currentLang === 'tr' ? 'en' : 'tr';
-    applyLang();
-  }
+  let currentLang = localStorage.getItem('knc-lang') || 'tr';
 
   function applyLang() {
     document.querySelectorAll('[data-lang]').forEach(el => {
@@ -1018,108 +341,26 @@
       el.classList.toggle('active', el.getAttribute('data-l') === currentLang);
     });
     document.documentElement.lang = currentLang;
+    localStorage.setItem('knc-lang', currentLang);
   }
 
-  // ── Navbar scroll ──
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-  });
-  // Start scrolled-transparent
-  document.getElementById('navbar').classList.remove('scrolled');
-
-  // ── Smooth scroll ──
-  function scrollToSection(id) {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  }
-  function scrollToTop(e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // ── Mobile menu ──
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-  }
-
-  // ── Gallery ──
-  const galleryImages = [
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEdZpxE9b5IhZM782eF72zKAgcGNL1njLaJzOTdsMyg0ttTJH-9ty90BHnDyWe-0wQH7DpDbB836OkclMiLCzB2GHDPKxOpITrHoi-yAwEl9WUS50QTuQ4Fh5ny0PDtLK8UyfHb=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDzsLOwNOSYfDkcq1phF_KH21SExbOo_OUV1-BeHm-0GlqXwXHgMPWzRVVve46VNWJr2SKB-9LYGpq43kIam9XWxhd8ibswuhl2SE83L6FqWAEli_n0QyfsvdgRc3dFHjrgD4=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_YFqPfdNwxVLHGbxeStVHEgJuZazI_3m-l8wj3eL0Berw-gdZxMJSjQXGKVt75ha3WY08jkjH24nDORcOHL9A_81IWg_yXplqgeqHyylZ2JQGwQXZD0xlefjqfGtcaLBAyYDU=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHIB_slV4-YPZzqwyIQuN7Mmm4Rt66t37G5jud6o2PJWJYQ3GKj9B-xJhFSyUT9mS18r8YqyORgnpDUnbVA6ccNcZ2F1nz1JXH0MVEhhECxup_4PpqyzOcNAq5e9JMoezlW2PvJ=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHYvKO-ucAh8dRmzoTS0DPafqyVsUlcjuq2AXOca2zb9Q6BkrwMlnQG2SO27y0iJu_Bp8QLEhRi3Pm7pf94EOC0_jEnUcikpTyH9VvwCkWF5t204inWcU53nXx2w6ohfWEOxE=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnU8ML8n1-JFHS1RGSejcPSUH1OSmvxIMBbVhAS9U4T-xM0e7jNqzS_2Nj-drTx4kCaNf_rZwl3q9_qS9Exum6IHmJkTkjzwFsh_jKgPYS6KdfRncOfVETA52UEihdq-GqUuTs=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgGt7acVI3Vv3ZG-jTwzhmr333rJSGxMJ99P3edJQNkRPEdV7Dw2_zx0dMRRCvR2E9jj04tqGcgmM0ivMaEzyG5Mutmqx9pgjM2sLoDKtg5c1yasvMnSit5uhVX5JSgnQcPa4i=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3qMQK8v_wBBw7vlTwvMHc7lobPuiey0Mx4hutvf-KVpThyrUnnwy0v3eTnR1nDpug8T8MYCRvI0EKOlLQ4rfCfmFuiOdx6NI5H5M5hwnpbXB2s7R2QHcl4tviGYq7WkaI-9Ms=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHgIfrFAOmZbMcsK0x8_MtaOp8McZHoJBRnsyk6mJcHYRcJVehRIYHpXg7oq9Wb-TOdQuUkUC6IEj6k_WHwQplDIGBtN_sIT5ZuJSPvX0ikD0rP-RS8UfIgMJSfYfoasVCQnc=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3NB2f7j8cT0jDhZU2lfdrSqDICJVXOiCXP-0sP8eY7mpP5H9V4ab9IVzIkNZn-znDnEQjwTAkvYutdmBvGHtWX2B1PuOlbs-XTmvkU8yBz28NSirDKxeXlNKuyKPPgPj61vEP=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGV7RQP3pvVYe7-OfSoTkUOcZy-viIVsU-Do7NcwHL17I7rJypA9SMQa8crqJRKGmn7rsfIgDUVvcA5p2ZSnqCMkXpdjibqJWNBQO4UjZ6CkQ_0PmWE5a1bzfVjZLjPrzNq1Q0xXg=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaqhAXjuHFgbIf6w5SCOPKI-Ky06pSPL9IcgfwsQpdKRqtabYnYUg6dHwHON_vP6iDT52NCoTr5KRChjk25KpKRnnhjGsGQFPU8sfGWuFNLSh7ifLFcmXF7tjexIvyKWxO65U0=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNMxe0iA5thblUb6_rpBuvkps9pksYGSFWkSWD7srOUyuIvt9Z9lxM1TzmyO3bWGaK1WvcYA-zNaFtdbWPPMNKqMiri16PBoZNZM_Y3PLryRf3UsDdP-nDTeI9X1WyTb4g2zzn=w1920-h1080-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGApdFkX0MlsRNMNjJgDJWPnqECPwQKQZjXwQYoTSAMMe850c8Xuk63uSRtZBUnoDnyN5i-AmeWHSDNizcFrC1eg3FoK2ElmfwgZIx_oM-O0YHh_XaiVOG7zoRnOdTcd0_FvSoR=w1920-h1080-k-no'
-  ];
-
-  let lightboxIdx = 0;
-
-  function buildGallery() {
-    const grid = document.getElementById('galleryGrid');
-    galleryImages.forEach((url, i) => {
-      const item = document.createElement('div');
-      item.className = 'gallery-item';
-      item.onclick = () => openLightbox(i);
-      item.innerHTML = `
-        <img src="${url.replace('w1920-h1080', 'w800-h600')}" alt="KNC Lazer Kesim Çalışma ${i+1}" loading="lazy" />
-        <div class="gallery-item-overlay">
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
-        </div>`;
-      grid.appendChild(item);
-    });
-  }
-
-  function openLightbox(idx) {
-    lightboxIdx = idx;
-    document.getElementById('lightbox-img').src = galleryImages[idx];
-    document.getElementById('lightbox').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function lightboxNav(dir) {
-    lightboxIdx = (lightboxIdx + dir + galleryImages.length) % galleryImages.length;
-    document.getElementById('lightbox-img').src = galleryImages[lightboxIdx];
-  }
-
-  document.getElementById('lightbox').addEventListener('click', function(e) {
-    if (e.target === this) closeLightbox();
-  });
-
-  document.addEventListener('keydown', e => {
-    if (document.getElementById('lightbox').classList.contains('open')) {
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') lightboxNav(-1);
-      if (e.key === 'ArrowRight') lightboxNav(1);
-    }
-  });
-
-  // ── Contact form ──
-  function handleFormSubmit(e) {
-    e.preventDefault();
-    document.getElementById('formWrap').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-    // Re-apply lang state to newly visible elements
+  function toggleLang() {
+    currentLang = currentLang === 'tr' ? 'en' : 'tr';
     applyLang();
   }
 
-  // ── Init ──
+  document.getElementById('langToggle').addEventListener('click', toggleLang);
+  document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
   document.getElementById('footerYear').textContent = new Date().getFullYear();
-  buildGallery();
   applyLang();
 </script>
 </body>
