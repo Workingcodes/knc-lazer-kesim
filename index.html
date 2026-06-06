@@ -259,6 +259,93 @@
   </div>
 </section>
 
+<section class="faq-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span class="section-badge">
+        <span data-lang-inline="tr" class="active">Merak Edilenler</span><span data-lang-inline="en">FAQ</span>
+      </span>
+      <h2 class="section-title" style="color:var(--primary)">
+        <span data-lang="tr" class="active">Sıkça Sorulan <span class="text-accent">Sorular</span></span>
+        <span data-lang="en">Frequently Asked <span class="text-accent">Questions</span></span>
+      </h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-lang-inline="tr" class="active">CNC lazer kesim için minimum sipariş miktarı var mı?</span>
+          <span data-lang-inline="en">Is there a minimum order quantity for CNC laser cutting?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            <span data-lang-inline="tr" class="active">Hayır, minimum sipariş şartımız yoktur. Tek adet prototipten başlayarak seri üretime kadar her ölçekte sipariş kabul ediyoruz. Küçük siparişler için hızlı teslimat avantajımız mevcuttur.</span>
+            <span data-lang-inline="en">No, we have no minimum order requirement. We accept orders of any scale, from single prototypes to mass production. We offer fast delivery for small orders.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-lang-inline="tr" class="active">Hangi malzemelerde kesim yapıyorsunuz?</span>
+          <span data-lang-inline="en">What materials do you cut?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            <span data-lang-inline="tr" class="active">Ahşap, MDF, sunta, kontrplak, lamine panel ve çeşitli ahşap türevli malzemelerde CNC lazer ve router kesim yapıyoruz. Malzeme türüne göre en uygun teknolojiyi belirliyoruz.</span>
+            <span data-lang-inline="en">We perform CNC laser and router cutting on wood, MDF, particleboard, plywood, laminated panels, and various wood-derivative materials. We determine the most appropriate technology based on the material type.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-lang-inline="tr" class="active">Teslimat süresi ne kadar?</span>
+          <span data-lang-inline="en">What is the delivery time?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            <span data-lang-inline="tr" class="active">Sipariş büyüklüğüne ve yoğunluğa göre teslimat süremiz genellikle 1–5 iş günüdür. Acil siparişler için öncelikli üretim seçeneği sunuyoruz. Sipariş sırasında kesin süreyi bildiriyoruz.</span>
+            <span data-lang-inline="en">Depending on order size and workload, our delivery time is typically 1–5 business days. We offer priority production for urgent orders and confirm the exact timeframe at the time of order.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-lang-inline="tr" class="active">Dosyamı nasıl göndermem gerekiyor?</span>
+          <span data-lang-inline="en">How should I send my files?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            <span data-lang-inline="tr" class="active">DXF, DWG, SVG veya PDF formatında vektörel çizim dosyalarını WhatsApp veya e-posta ile gönderebilirsiniz. Dosyanız yoksa ölçülerinizi belirtmeniz yeterli; tasarım desteği sağlıyoruz.</span>
+            <span data-lang-inline="en">You can send vector drawing files in DXF, DWG, SVG, or PDF format via WhatsApp or email. If you don't have a file, just provide your dimensions — we offer design support.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-lang-inline="tr" class="active">Fiyat teklifi almak için ne yapmalıyım?</span>
+          <span data-lang-inline="en">How can I get a price quote?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            <span data-lang-inline="tr" class="active">+90 555 176 34 14 numaralı telefondan bizi arayabilir, iletişim formunu doldurabilir ya da dosyanızı doğrudan WhatsApp üzerinden gönderebilirsiniz. Ücretsiz ve hızlı fiyat teklifi sunuyoruz.</span>
+            <span data-lang-inline="en">You can call us at +90 555 176 34 14, fill out the contact form, or send your file directly via WhatsApp. We provide free and fast price quotes.</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="cta-banner">
   <div class="container">
     <h2>
@@ -347,6 +434,13 @@
   function toggleLang() {
     currentLang = currentLang === 'tr' ? 'en' : 'tr';
     applyLang();
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
   }
 
   document.getElementById('langToggle').addEventListener('click', toggleLang);
